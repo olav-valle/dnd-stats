@@ -4,6 +4,7 @@ from numpy.random import randint
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 st.header('Dungeons and Dragons Stats')
+st.markdown('Original concept credited to Eoin Elliott. Forked from [eoinell/dnd-stats](https://github.com/eoinell/dnd-stats)')
 
 # different sided dice in DnD
 sides = (4, 6, 8, 10, 12, 20)
@@ -102,6 +103,6 @@ with cols[0]:
 '''
 This page calculates the success probability of a skill check in Dungeons and Dragons and other similar dice-based games. This may be useful for DMs to get an idea of where to set the DC of a skill check to give the players an interesting chance. Often, guidance, advantage and modifiers can make it difficult to assess just what the odds are!
 
-Forked from https://github.com/eoinell/dnd-stats
+[Source code.](https://github.com/olav-valle/dnd-stats)
 
 '''
