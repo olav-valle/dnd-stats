@@ -14,7 +14,7 @@ with cols[0]:
     main_die = st.selectbox('Main Die', dice, index=5)
 with cols[1]:
     # advantage means you get to roll twice and pick the higher roll, disadvantage the opposite
-    advantage = st.radio('', ('Advantage', 'None', 'Disadvantage'), index=1) # 
+    advantage = st.radio('', ('Advantage', 'None', 'Disadvantage'), index=1) #
 with cols[2]:
     # static bonus applied to the roll
     modifier = int(st.number_input('Modifier', value=0, step=1, ))
@@ -28,9 +28,9 @@ more_dice_cols = st.columns([12,] + 5*[9])
 with more_dice_cols[0]:
     number_more_dice = int(st.number_input('more dice', value=0, step=1, min_value=0, max_value=5))
 for col, _ in zip(more_dice_cols[1:], range(number_more_dice)):
-        with col:
-            additional_dice.append(st.selectbox(f'extra die {len(additional_dice) + 1}', dice))
-            dice_signs.append((1,-1)[st.checkbox('subtract', key=len(additional_dice))])
+    with col:
+        additional_dice.append(st.selectbox(f'extra die {len(additional_dice) + 1}', dice))
+        dice_signs.append((1,-1)[st.checkbox('subtract', key=len(additional_dice))])
 
 
 
@@ -102,5 +102,6 @@ with cols[0]:
 '''
 This page calculates the success probability of a skill check in Dungeons and Dragons and other similar dice-based games. This may be useful for DMs to get an idea of where to set the DC of a skill check to give the players an interesting chance. Often, guidance, advantage and modifiers can make it difficult to assess just what the odds are!
 
+Forked from https://github.com/eoinell/dnd-stats
 
 '''
